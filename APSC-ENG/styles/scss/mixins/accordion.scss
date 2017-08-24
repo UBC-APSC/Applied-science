@@ -1,0 +1,30 @@
+@import "buttons.scss";
+
+//-accordion
+@mixin accordion-base($ActionColour: $White, $ActionBG: $BtnBlueLight)
+{
+	@include btn-base($Colour: $ActionBG, $BgColour: $ActionColour, $Padding: 8px 40px 8px 16px);
+	width:100%;
+	cursor:pointer;
+	&:after
+	{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 25px;
+		content: "+";
+		color: $ActionColour;
+		@include border(11px, solid, $ActionBG);
+		@include border-radius(11px);
+		height: 0px;
+		width: 0px;
+		line-height: 2px;
+		text-indent: -8px;
+		font-size: $FontSizeLarge;
+	}
+	&:hover:after
+	{
+		color: $ActionBG;
+		border-color: $ActionColour;
+	}
+}

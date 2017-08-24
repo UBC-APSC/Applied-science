@@ -1,0 +1,15 @@
+//--import variables and mixins
+@import "variables/variables.scss";
+@import "mixins/mixins.scss";
+
+@import "colours.scss";
+//non-clf style definitions
+.non-clf
+{
+	@import "actions.scss";
+	@import "media.scss";
+	@import "navigation.scss";
+	@import "presentation-items.scss";
+	@import "slider.scss";
+	@import "text.scss";
+}

@@ -1,0 +1,44 @@
+//-links
+@mixin hover($Colour: '')
+{
+	@if ($Colour != '') {
+		color:$Colour;
+	}
+	text-decoration:underline;
+	&:hover {
+		text-decoration:none;
+	}
+}
+@mixin hover-colour($Colour: '')
+{
+	@if ($Colour != '') {
+		color:$Colour;
+	}
+	text-decoration:underline;
+	&:hover {
+		@if ($Colour != '') {
+			color:$Colour;
+		}
+		text-decoration:none;
+	}
+}
+@mixin hover-invert($Colour: '')
+{
+	@if ($Colour != '') {
+		color:$Colour;
+	}
+	text-decoration:none;
+	&:hover {
+		text-decoration:underline;
+	}
+}
+@mixin hover-no-decoration($Colour: '')
+{
+	@if ($Colour != '') {
+		color:$Colour;
+	}
+	text-decoration:none;
+	&:hover {
+		text-decoration:none;
+	}
+}

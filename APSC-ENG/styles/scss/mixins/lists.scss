@@ -1,0 +1,30 @@
+@import "fonts.scss";
+
+//-checklist
+@mixin checklist-base($CheckColour: $White, $CheckBG: $BtnBlueLight)
+{
+	list-style-type: none;
+	padding-left: 2em;
+	margin: 0 0 10px 25px;
+	li
+	{
+		@include font-parameters();
+		@include font-styles($FontWeightLight, $Colour: $Black);
+		margin: 0 0 0 10px;
+		&:before
+		{
+				position: absolute;
+				left: 40px;
+				content: "\2713";
+				color: $CheckColour;
+				@include border(9px, solid, $CheckBG);
+				@include border-radius(9px);
+				height: 0px;
+				width: 0px;
+				line-height: 2px;
+				text-indent: -6px;
+				font-size: $FontSizeSmall;
+				@include transform-rotate(15deg);
+		}
+	}
+}

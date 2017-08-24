@@ -1,0 +1,32 @@
+//-fonts
+//--weight
+$FontWeightLight: 100;
+$FontWeightBook: 400;
+$FontWeightMedium: 500;
+$FontWeightSemibold: 600;
+$FontWeightBold: 700;
+$FontWeightBolder: 900;
+
+//--size
+//---static font size
+$FontSizeBase: 16px;
+$FontSizeSmallest: ($FontSizeBase * 0.6875);			// 11px
+$FontSizeSmaller: ($FontSizeBase * 0.75);				// 12px
+$FontSizeSmall: ($FontSizeBase * 0.875);				// 14px
+$FontSizeFeatured: ($FontSizeBase);						// 16px
+$FontSizeGallery: ($FontSizeBase * 1.125);				// 18px
+$FontSizeSmallHeader: ($FontSizeBase * 1.125);			// 18px
+$FontSizeMedium: ($FontSizeBase * 1.25);				// 20px
+$FontSizeLarge: ($FontSizeBase * 1.5);					// 24px
+$FontSizeMobileSubHeading: ($FontSizeBase * 1.5625);	// 25px
+$FontSizeMobileHeading: ($FontSizeBase * 1.75);			// 28px
+$FontSizeMediumHeading: ($FontSizeBase * 1.75);			// 28px
+$FontSizeLarger: ($FontSizeBase * 1.875);				// 30px
+$FontSizeMobileMainHeader: ($FontSizeBase * 1.875);		// 30px
+$FontSizeHeading: ($FontSizeBase * 2);					// 32px
+$FontSizeXLarge: ($FontSizeBase * 2.25);				// 36px
+$FontSizeMainHeader: ($FontSizeBase * 3);				// 48px
+$FontSizeMainHeaderLargeDisplay: ($FontSizeBase * 3.75);// 60px
+	
+//---auto-adjust font size
+$FontSizeResponsive: 3.5vw;

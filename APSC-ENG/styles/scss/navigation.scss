@@ -1,0 +1,121 @@
+@import "mixins/buttons.scss";
+@import "mixins/links.scss";
+
+//-menus
+nav
+{
+	ul, .menu.nav
+	{
+		margin:0;
+		list-style-type: none;
+		li, .leaf
+		{
+			@include font-parameters($FontSizeSmall);
+			@include border(1px 0 0 0, solid, $LightWarmGrey);
+			a
+			{
+				display: inline-block;
+				width:100%;
+				height:100%;
+				@include font-styles($FontWeightLight, $Colour: $UBCBlue);
+				@include hover-no-decoration();
+				&:hover {
+					background-color: $MenuHoverBG;
+					@include font-styles($Colour: $White);
+				}
+			}
+			>a
+			{
+				padding: 5px 0 5px 25px;
+			}
+			ul, .menu.nav
+			{
+				li, .leaf
+				{
+					>a
+					{
+						padding: 5px 0 5px 50px;
+					}
+				}
+				ul, .menu.nav
+				{
+					li, .leaf
+					{
+						>a
+						{
+							padding: 5px 0 5px 75px;
+						}
+					}
+				}
+			}
+		}
+		.leaf.active-trail, .menu-item.menu-item--active-trail.menu-item--expanded
+		{
+			>a, .leaf.active-trail.active
+			{
+				@include font-styles($FontWeightSemibold);
+				&:hover {
+					background-color: $MenuHoverBG;
+					@include font-styles($FontWeightSemibold, $Colour: $White);
+				}
+			}
+		}
+		li
+		{
+			>a.is-active
+			{
+				@include font-styles($FontWeightSemibold);
+				&:hover {
+					background-color: $MenuHoverBG;
+					@include font-styles($FontWeightSemibold, $Colour: $White);
+				}
+			}
+		}
+	}
+}
+ul.nav
+{
+	list-style-type: none;
+	margin:0;
+	li
+	{
+		>a
+		{
+			color:$UBCBlue;
+			@include border(0 1px 1px 1px);
+			@include element-hover($White, $UBCBlue);
+			padding: 8px 14px;
+			text-decoration: none;
+		}
+		&:first-child>a
+		{
+			@include border();				
+		}
+	}
+}
+//-breadcrumb
+.breadcrumb
+{
+	list-style-type: none;
+	li
+	{
+		@include font-parameters($FontSizeSmallest);
+		@media (max-width: 979px) {
+			@include font-parameters($FontSizeSmallest, $LineHeightMobile);
+		}
+
+		*
+		{
+			@include font-styles($FontWeightLight);
+		}
+		display:inline-block;
+		a
+		{
+			@include hover-no-decoration();
+		}
+		.divider
+		{
+			@include font-styles($FontWeightLight);
+		}
+	}
+}

@@ -1,0 +1,39 @@
+@mixin border($Width: 1px, $Style: solid, $Colour: $LightWarmGrey)
+{
+	border-width:$Width;
+	border-style:$Style;
+	border-color:$Colour;
+}
+@mixin border-radius($radius: 5px)
+{
+	-webkit-border-radius: $radius;
+	-moz-border-radius:    $radius;
+	border-radius:         $radius;
+
+	-moz-background-clip:    padding;
+	-webkit-background-clip: padding-box;
+	background-clip:         padding-box;
+}
+@mixin transform-rotate($Deg: 0deg)
+{
+	transform: rotate($Deg);
+    -o-transform: rotate($Deg);
+    -ms-transform: rotate($Deg);
+    -webkit-transform: rotate($Deg);
+}
+@mixin vertical-align()
+{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+@mixin simple-transition($Property: all, $TimingFunction: ease, $Delay: 0.2s)
+{
+	-webkit-transition: $Property $TimingFunction $Delay;
+	-moz-transition: $Property $TimingFunction $Delay;
+	-o-transition: $Property $TimingFunction $Delay;
+	-ms-transition: $Property $TimingFunction $Delay;
+	transition: $Property $TimingFunction $Delay;
+}

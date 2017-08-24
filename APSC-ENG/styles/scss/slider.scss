@@ -1,0 +1,57 @@
+@import "variables/colours.scss";
+
+//-slider
+.flexslider
+{
+	.flex-control-nav
+	{
+		@media (max-width: 520px) {
+			display:none;
+		}
+		bottom: 0px;
+		z-index: 2;
+		li
+		{
+			a
+			{
+				background-color: rgba(255, 255, 255, 0.5);
+				width: 15px;
+				height: 15px;
+				cursor:pointer;
+				&:hover
+				{
+					background: $APSCBlue;
+				}	
+			}
+			.flex-active
+			{
+				background: $UBCBlue;
+			}
+		}
+	}
+	.flex-direction-nav
+	{
+		@media (max-width: 767px) {
+			display:none;
+		}
+		list-style-type: none;
+		margin:0;
+		a
+		{
+			z-index: 2;
+			visibility:hidden;
+			line-height: 40px;
+			opacity: 0.7;
+			&:before
+			{
+				visibility: visible;
+				color: rgba(255, 255, 255, 1);
+				//text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8);
+			}
+			&:hover
+			{
+				opacity: 1;
+			}
+		}
+	}
+}

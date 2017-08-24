@@ -1,0 +1,31 @@
+@import "fonts.scss";
+@import "misc.scss";
+
+//-buttons
+@mixin btn-base($Invert: false, $DarkBG: false, $Colour: $BtnBlueLight, $BgColour: $White, $Padding: 8px 16px)
+{
+    display: inline-block;
+	cursor:pointer;
+	@include font-parameters();
+	@include border-radius(1px);
+	text-decoration:none;
+	padding:$Padding;
+	@include font-styles($FontWeightMedium, normal, $Colour);
+	@include element-hover($BgColour, $Colour);
+	@if ($Invert == true) {
+		background-color:$BgColour;
+	}
+	@if ($DarkBG == true) {
+		@include border(1px, solid, $BgColour);
+	}
+	@elseif ($DarkBG == false) {
+		@include border(1px, solid, $Colour);
+	}
+}
+@mixin element-hover($TextColour, $BgColour)
+{
+	&:hover {
+		color: $TextColour;
+		background-color: $BgColour;
+	}
+}

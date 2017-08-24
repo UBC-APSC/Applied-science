@@ -1,0 +1,32 @@
+@import "buttons.scss";
+@import "links.scss";
+
+//-tags
+@mixin tags-base($Invert: true, $DarkBG: false, $Colour: $BtnBlueLight, $BgColour: $White, $Padding: 0px 8px)
+{
+	list-style-type: none;
+	li, div
+	{
+		display: inline-block;
+		@include btn-base($Invert, $DarkBG, $Colour, $BgColour, $Padding);
+		a
+		{
+			@include hover-invert($Colour);
+			&:hover
+			{
+				color: $BgColour;
+			}
+		}
+		&:hover
+		{
+			a
+			{
+				color: $BgColour;
+			}
+		}
+	}
+	div
+	{
+		margin:2px 0;
+	}
+}

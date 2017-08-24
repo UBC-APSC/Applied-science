@@ -1,0 +1,106 @@
+@import "mixins/fonts.scss";
+
+//-media
+//-- img + figures
+.full-width-image-container
+{
+	img
+	{
+		width:100%;
+		max-width:100%;
+		height: auto;
+	}
+}
+figure
+{
+	figcaption
+	{
+		@include font-styles($FontWeightLight, italic, $DarkText);
+		@include font-parameters($FontSizeSmall, $LineHeightBase);
+		overflow-wrap: break-word;
+	}
+}
+.figure-caption, .image-caption, .photo-caption
+{
+	@include font-styles($FontWeightLight, italic, $DarkText);
+	@include font-parameters($FontSizeSmall, $LineHeightBase);
+	margin:0 0 20px 0;
+	overflow-wrap: break-word;
+}
+
+//--headshots
+.headshot
+{
+	&.faculty-profile
+	{
+		@media (min-width: 639px) {
+			float:right;
+			margin: 0 0 10px 10px;
+		}
+		figure, img
+		{
+			max-width: 300px;
+			max-height: 450px;
+		}
+	}
+	&.article-content
+	{
+		float:right;
+		margin: 0 0 10px 10px;
+		@media (max-width: 639px) {
+			float:none;
+			margin: 10px auto;
+			text-align:center;
+		}
+	}
+	&.large
+	{
+		figure, img
+		{
+			max-width: 300px;
+			max-height: 450px;
+		}
+	}
+	&.media-release, &.medium
+	{
+		figure, img
+		{
+			max-width: 200px;
+			max-height: 300px;
+		}
+	}
+	&.small
+	{
+		figure, img
+		{
+			max-width:100px;
+			max-height: 150px;
+		}
+	}
+	figcaption, .headshot-caption
+	{
+		@include font-styles($FontWeightLight, italic, $Black);
+		@include font-parameters($FontSizeSmall, $LineHeightBase);
+	}
+}
+//--video
+.video
+{
+	max-width:100%;
+	width:1200px;
+	height:540px;
+	margin:0 auto;
+	display: block;
+		height:480px;
+	@media (min-width: 980px) and (max-width: 1199px) {
+	}
+	@media (min-width: 768px) and (max-width: 979px) {
+		height:460px;
+	}
+	@media (min-width: 480px) and (max-width: 767px) {
+		height:320px;
+	}
+	@media (max-width: 479px) {
+		height:220px;
+	}
+}

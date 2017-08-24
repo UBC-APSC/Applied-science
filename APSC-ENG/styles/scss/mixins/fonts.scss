@@ -1,0 +1,38 @@
+@import "../variables/colours.scss";
+@import "../variables/font.scss";
+@import "../variables/paragraph.scss";
+@import "../variables/misc.scss";
+
+//-fonts
+@mixin font-styles($Weight: $FontWeightBook, $Style: normal, $Colour: $UBCBlue)
+{
+  font-weight: $Weight;
+  font-style: $Style;
+  color: $Colour;
+}
+@mixin header-font-styles($Weight: $FontWeightBook, $Style: normal, $Colour: $UBCBlue)
+{
+  font-weight: $Weight;
+  font-style: $Style;
+  color: $Colour;
+  text-transform: uppercase;
+}
+@mixin font-parameters($Fontsize: $FontSizeBase)
+{
+	font-size: $Fontsize;
+}
+@mixin font-parameters($Fontsize: $FontSizeBase, $Lineheight: $LineHeightBase)
+{
+	font-size: $Fontsize;
+	line-height: $Lineheight;
+}
+@mixin font-parameters($Fontsize: $FontSizeBase, $Lineheight: $LineHeightBase, $Letterspacing: $LetterSpacingDefault)
+{
+	font-size: $Fontsize;
+	line-height: $Lineheight;
+	letter-spacing: $Letterspacing;
+}
+@mixin text-shadow($Shadow: $ShadowBase, $Colour: $Black)
+{
+	text-shadow: $Shadow $Colour;
+}

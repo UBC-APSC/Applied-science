@@ -1,0 +1,184 @@
+@import "mixins/fonts.scss";
+@import "mixins/links.scss";
+@import "mixins/misc.scss";
+
+//-headers
+// landing over image
+.landing-header
+{
+	@include header-font-styles($FontWeightMedium, $Colour: $White);
+	z-index:2;
+	//@include text-shadow($ShadowBase, $ShadowBaseColour);
+	@media (max-width: 480px) {
+		@include font-parameters($FontSizeMobileMainHeader, $LineHeightMainHeaderMobile, $LetterSpacingDefault);
+	}
+	@media (min-width: 481px) {
+		@include font-parameters($FontSizeMainHeader, $LineHeightMainHeader, $LetterSpacingMedium);
+	}
+	@media (min-width: 980px) {
+		@include font-parameters($FontSizeMainHeaderLargeDisplay, $LineHeightMainHeaderLargeDisplay, $LetterSpacingMedium);
+	}
+}
+// landing with text shadow
+.landing
+{
+	@include header-font-styles($FontWeightMedium, $Colour: $White);
+	z-index:2;
+	@include text-shadow($ShadowBase, $ShadowBaseColour);
+	@media (max-width: 480px) {
+		@include font-parameters($FontSizeMobileMainHeader, $LineHeightMainHeaderMobile, $LetterSpacingDefault);
+	}
+	@media (min-width: 481px) {
+		@include font-parameters($FontSizeMainHeader, $LineHeightMainHeader, $LetterSpacingMedium);
+	}
+	@media (min-width: 980px) {
+		@include font-parameters($FontSizeMainHeaderLargeDisplay, $LineHeightMainHeaderLargeDisplay, $LetterSpacingMedium);
+	}
+}
+h1, .h1
+{
+	@include header-font-styles($FontWeightLight);
+	@include font-parameters($FontSizeMainHeader, $LineHeightMainHeader, $LetterSpacingMedium);
+	@media (max-width: 480px) {
+		@include font-parameters($FontSizeMobileMainHeader, $LineHeightMainHeaderMobile, $LetterSpacingDefault);
+		@include header-font-styles($FontWeightBook);
+	}
+}
+h2, .h2
+{
+	@include header-font-styles($FontWeightSemibold);
+	@include font-parameters($FontSizeHeading, $LineHeightHeading, $LetterSpacingMedium);
+	@media (max-width: 480px) {
+		@include font-parameters($FontSizeMobileHeading, $LineHeightHeadingMobile, $LetterSpacingDefault);
+	}
+}
+h3, .h3
+{
+	@include header-font-styles($FontWeightSemibold, $Colour: $DarkCoolGrey);
+	@include font-parameters($FontSizeMediumHeading, $LineHeightLarger, $LetterSpacingMedium);
+	@media (max-width: 480px) {
+		@include font-parameters($FontSizeMobileSubHeading, $LineHeightSubHeadingMobile, $LetterSpacingDefault);
+	}
+}
+h4, .h4
+{
+	@include header-font-styles($FontWeightMedium, $Colour: $Blue001);
+	@include font-parameters($FontSizeLarge, $LineHeightLarge, $LetterSpacingMedium);
+	@media (max-width: 480px) {
+		@include font-parameters($FontSizeLarge, $LineHeightBase, $LetterSpacingMedium);
+	}
+}
+h5, .h5
+{
+	@include header-font-styles();
+	@include font-parameters($FontSizeMedium);
+}
+.h5
+{
+	margin-bottom:10px;
+}
+h6, .h6
+{
+	@include header-font-styles();
+	@include font-parameters($FontSizeBase, $LineHeightSmallHeading);
+}
+.h6
+{
+	margin-bottom:5px;
+}
+
+//--elements
+a
+{
+	@include hover($LinkAccentColour);
+}
+hr
+{
+	margin: 20px 0;
+	@include border(1px 0 0 0);
+}	
+//-content
+//--text
+.lead
+{
+	@include font-styles($FontWeightLight, $Colour: $Blue001);
+	@include font-parameters($FontSizeMedium, $LineHeightLeadSmall, $LetterSpacingSmall);
+	@media (max-width: 480px) {
+		@include font-parameters($FontSizeMedium, $LineHeightBase, $LetterSpacingSmall);
+	}
+	p
+	{
+		@include font-styles($FontWeightLight, $Colour: $Blue001);
+		@include font-parameters($FontSizeMedium, $LineHeightLeadSmall, $LetterSpacingSmall);
+		@media (max-width: 480px) {
+			@include font-parameters($FontSizeMedium, $LineHeightBase, $LetterSpacingSmall);
+		}
+	}
+}
+.lead.alt
+{
+	color: $LightText;
+	p
+	{
+		color: $LightText;
+	}
+}
+p
+{
+	@include font-styles($FontWeightLight, $Colour: $bodyText);
+	@include font-parameters();
+	margin:0 0 20px 0;
+	a
+	{
+		@include hover($LinkAccentColour);
+	}
+}
+p + ul, p + ol
+{
+	margin-top:-10px;
+}
+blockquote
+{
+	border:0;
+}
+blockquote, blockquote > p
+{
+	@include font-styles($FontWeightLight, italic, $UBCBlue);
+	@include font-parameters($FontSizeMedium, $LineHeightMedium);
+}
+//--featured links
+.featured-link
+{
+	display: inline-block;
+	@include header-font-styles($FontWeightSemibold);
+	@include font-parameters($FontSizeFeatured);
+	@include hover-no-decoration();
+	cursor:pointer;
+	margin-right:25px;
+	padding: 8px 25px 8px 0;
+	background-position: 100% 50%;
+	background-image: url('../images/icons/red-arrow.png');
+	background-repeat: no-repeat;
+	@include simple-transition();
+	&:hover {
+		color:$APSCBlue;
+		padding-right:50px;
+		margin-right:0px;
+	}
+}
+.link-effect
+{
+	@include hover();
+}
+.link-inverse-effect
+{
+	@include hover-invert();
+}
+.link-no-decoration
+{
+	@include hover-no-decoration();
+}
+.text-center
+{
+	text-align:center;
+}

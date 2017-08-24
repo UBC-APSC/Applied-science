@@ -1,0 +1,25 @@
+//--line-height
+$LineHeightBase: 24px;
+$LineHeightSmaller: ($LineHeightBase * 0.5834);				// 14px
+$LineHeightMobile: ($LineHeightBase / 1.5);					// 16px
+$LineHeightBaseFontSize: ($LineHeightBase / 1.5);			// 16px
+$LineHeightSmallHeading: ($LineHeightBase * 0.75);			// 18px
+$LineHeightSmall: ($LineHeightBase / 1.2);					// 20px
+$LineHeightMedium: ($LineHeightBase / 0.96);				// 25px
+$LineHeightSubHeadingMobile: ($LineHeightBase / 0.96);		// 25px
+$LineHeightLarge: ($LineHeightBase * 1.167);				// ~28px	
+$LineHeightHeadingMobile: ($LineHeightBase * 1.167);		// ~28px	
+$LineHeightLeadSmall: ($LineHeightBase * 1.167);			// ~28px	
+$LineHeightMainHeaderMobile: ($LineHeightBase * 1.25);		// 30px
+$LineHeightLarger: ($LineHeightBase * 1.45834);				// ~35px
+$LineHeightLead: ($LineHeightBase * 1.5);					// 36px
+$LineHeightMediumHeading: ($LineHeightBase * 1.75);			// 42px	
+$LineHeightHeading: ($LineHeightBase * 1.875);				// 45px
+$LineHeightXLarge: ($LineHeightBase * 1.9167);				// ~46px
+$LineHeightMainHeader: ($LineHeightBase / 0.48);			// 50px
+$LineHeightMainHeaderLargeDisplay: ($LineHeightBase * 2.5);	// 60px
+	
+//--letter-spacing
+$LetterSpacingDefault: 0px;
+$LetterSpacingSmall: 1px;
+$LetterSpacingMedium: ($LetterSpacingSmall * 2); // 2px
