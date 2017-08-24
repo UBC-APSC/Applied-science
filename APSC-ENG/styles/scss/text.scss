@@ -96,7 +96,8 @@ hr
 {
 	margin: 20px 0;
 	@include border(1px 0 0 0);
-}	
+}
+
 //-content
 //--text
 .lead
@@ -146,6 +147,7 @@ blockquote, blockquote > p
 	@include font-styles($FontWeightLight, italic, $UBCBlue);
 	@include font-parameters($FontSizeMedium, $LineHeightMedium);
 }
+
 //--featured links
 .featured-link
 {
